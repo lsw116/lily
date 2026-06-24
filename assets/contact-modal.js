@@ -1,8 +1,8 @@
-(function () {
+﻿(function () {
   if (window.__contactQrModalReady) return;
   window.__contactQrModalReady = true;
 
-  const defaultMessage = "客服每日15小时在线，微信和 QQ 同号：82765536";
+  const defaultMessage = "客服每日15小时在线，微信号：BKP168001";
   let modal;
 
   function ensureModal() {
@@ -16,7 +16,7 @@
           <button class="contact-qr-close" type="button" data-contact-qr-close aria-label="关闭">×</button>
           <h2 id="contactQrTitle">联系客服</h2>
           <p data-contact-qr-message>${defaultMessage}</p>
-          <img src="assets/contact-qrcode.png" alt="文文AI 微信二维码" class="contact-qr-image" loading="lazy" decoding="async">
+          <img src="assets/contact-qrcode.png" alt="莉莉AI 微信二维码" class="contact-qr-image" loading="lazy" decoding="async">
         </div>
       </div>
     `.trim();
@@ -59,3 +59,4 @@
     if (event.key === "Escape") closeModal();
   });
 })();
+
