@@ -1,0 +1,272 @@
+/* Homepage micro polish and light animations, 20260702 */
+.clean-home {
+  --page: #f5f7fb;
+  --surface-soft: #f8fafc;
+  --ink: #101828;
+  --muted: #344054;
+  --soft: #667085;
+  --line: #d8e2ef;
+  --line-strong: #b9c8dc;
+  --brand: #2759d8;
+  --brand-dark: #173f9d;
+  --accent-teal: #0f766e;
+  background: linear-gradient(180deg, #fbfcff 0%, #f4f7fb 58%, #edf2f8 100%) !important;
+}
+
+.clean-home::before {
+  opacity: 0.42;
+  background-size: 46px 46px;
+}
+
+.site-header {
+  border-color: rgba(185, 200, 220, 0.72);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+}
+
+.brand-mark {
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1c4fc7, #0f766e);
+}
+
+.site-nav a,
+.nav-action,
+.clean-home .btn {
+  border-radius: 10px;
+}
+
+.site-nav a,
+.nav-action {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-nav a {
+  border: 1px solid rgba(196, 211, 232, 0.78);
+  background: linear-gradient(180deg, #ffffff 0%, #f2f6ff 100%);
+  color: #24364f;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+.site-nav a::after,
+.nav-action::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  bottom: -40%;
+  left: -80%;
+  width: 48%;
+  transform: skewX(-18deg);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 28%,
+    rgba(255, 255, 255, 0.72) 50%,
+    rgba(255, 255, 255, 0.18) 72%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: nav-light-sweep 5.2s ease-in-out infinite;
+}
+
+.site-nav a:nth-child(2)::after {
+  animation-delay: 0.34s;
+}
+
+.site-nav a:nth-child(3)::after {
+  animation-delay: 0.68s;
+}
+
+.site-nav a:nth-child(4)::after {
+  animation-delay: 1.02s;
+}
+
+.site-nav a:nth-child(5)::after {
+  animation-delay: 1.36s;
+}
+
+.nav-action::after {
+  animation-delay: 1.7s;
+}
+
+.site-nav a:hover {
+  background: #f0f5ff;
+}
+
+@keyframes nav-light-sweep {
+  0%,
+  52% {
+    left: -85%;
+  }
+
+  70%,
+  100% {
+    left: 132%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav a::after,
+  .nav-action::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.hero-section {
+  gap: 16px;
+  padding-top: 24px;
+}
+
+.hero-copy,
+.order-card,
+.notice-row article,
+.process-section,
+.support-section,
+.split-section,
+.video-grid article,
+.faq-section {
+  border-color: rgba(191, 204, 221, 0.78);
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.065);
+}
+
+.hero-copy {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.hero-copy::before {
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand), var(--accent-teal));
+}
+
+.hero-copy h1 {
+  font-size: clamp(2rem, 4vw, 3.18rem) !important;
+  letter-spacing: 0 !important;
+}
+
+.hero-lead {
+  color: #344054 !important;
+  font-size: 1.04rem;
+}
+
+.clean-home .btn-primary {
+  background: linear-gradient(135deg, #2759d8, #173f9d);
+  box-shadow: 0 12px 22px rgba(39, 89, 216, 0.18);
+}
+
+.clean-home .btn-secondary {
+  background: #ffffff;
+  border-color: #c9d6e8;
+  color: #23458f;
+}
+
+.hero-route {
+  margin: 0 0 22px;
+}
+
+.hero-meta div {
+  border-color: #dce6f3;
+  background: #ffffff;
+}
+
+.hero-save-note {
+  border-color: #ead39f;
+  background: #fffaf0;
+  color: #7a4f08;
+}
+
+.order-card {
+  border-top-width: 3px;
+}
+
+.card-label {
+  background: #eef4ff;
+  color: #2759d8;
+}
+
+.price-row {
+  padding: 14px 16px;
+  border: 1px solid #e0e8f4;
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+.price-row strong {
+  color: #d92d20;
+  letter-spacing: 0 !important;
+}
+
+.price-detail-link {
+  color: #2457d6;
+}
+
+.steps-grid article,
+.support-list article,
+.faq-grid article {
+  border-color: #dde7f3;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.045);
+}
+
+.steps-grid span {
+  background: #edf4ff;
+  color: #2457d6;
+}
+
+.video-grid article {
+  background: #ffffff;
+}
+
+.video-grid video {
+  border-radius: 12px;
+  background: #e8eef7;
+}
+
+.video-tip {
+  border-color: #dce6f3;
+  background: #f8fafc;
+}
+
+@property --home-flow-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.clean-home .btn.btn-flow-border {
+  --home-flow-border-angle: 0deg;
+  --home-flow-surface: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  background:
+    var(--home-flow-surface) padding-box,
+    conic-gradient(from var(--home-flow-border-angle), rgba(96, 165, 250, 0.5) 0deg, rgba(96, 165, 250, 0.5) 218deg, #fff 254deg, #7dd3fc 286deg, rgba(34, 197, 94, 0.82) 312deg, rgba(59, 130, 246, 0.62) 338deg, rgba(96, 165, 250, 0.5) 360deg) border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.2);
+  animation: home-flow-border 2.2s linear infinite;
+}
+
+.clean-home .btn.btn-flow-border:hover {
+  --home-flow-surface: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+@keyframes home-flow-border {
+  to {
+    --home-flow-border-angle: 360deg;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.05rem !important;
+  }
+
+  .price-row {
+    padding: 12px 14px;
+  }
+}

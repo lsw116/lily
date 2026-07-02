@@ -2138,6 +2138,191 @@
       }
     }
   </style>
+<style>
+    /* 5.html micro UI polish 20260702: visual-only overrides */
+    body.system-choice-page{
+      --micro-bg:#f5f8fc;
+      --micro-surface:#ffffff;
+      --micro-surface-soft:#f8fbff;
+      --micro-ink:#111827;
+      --micro-muted:#53657c;
+      --micro-line:#d9e5f2;
+      --micro-blue:#2457d6;
+      --micro-blue-strong:#1d4ed8;
+      --micro-teal:#0f766e;
+      --micro-shadow:0 14px 36px rgba(15,23,42,.08);
+      background:linear-gradient(180deg, #f8fbff 0%, var(--micro-bg) 48%, #eef3f8 100%) !important;
+    }
+
+    body.system-choice-page > .subpage-topbar{
+      border-color:rgba(203,216,232,.86) !important;
+      border-radius:12px !important;
+      box-shadow:0 10px 26px rgba(15,23,42,.07) !important;
+    }
+
+    body.system-choice-page > .subpage-topbar nav a{
+      border:1px solid rgba(203,216,232,.68) !important;
+      background:linear-gradient(180deg, #ffffff 0%, #f3f7ff 100%) !important;
+      color:#2d405a !important;
+    }
+
+    body.system-choice-page > .subpage-topbar nav a:hover,
+    body.system-choice-page > .subpage-topbar nav a:active{
+      border-color:#b9cff4 !important;
+      background:#edf4ff !important;
+      color:var(--micro-blue) !important;
+    }
+
+    body.system-choice-page main.container{
+      max-width:940px !important;
+      border-color:rgba(203,216,232,.92) !important;
+      border-radius:14px !important;
+      background:rgba(255,255,255,.96) !important;
+      box-shadow:var(--micro-shadow) !important;
+    }
+
+    .system-choice-page header{
+      padding-bottom:12px !important;
+    }
+
+    .system-choice-page h1{
+      color:var(--micro-ink) !important;
+    }
+
+    .system-choice-page .system-card,
+    .system-choice-page .content-block,
+    .system-choice-page .system2-tutorial,
+    .system-choice-page .status-guide,
+    .system-choice-page .focus-hint{
+      border-color:var(--micro-line) !important;
+      box-shadow:0 10px 28px rgba(15,23,42,.055) !important;
+    }
+
+    .system-choice-page .system-header{
+      background:linear-gradient(180deg, #fbfdff 0%, #ffffff 100%) !important;
+    }
+
+    .system-choice-page .system-instructions li{
+      border-color:#dfe9f5 !important;
+      background:#fbfdff !important;
+      color:#34465c !important;
+    }
+
+    .system-choice-page .instruction-index,
+    .system-choice-page .refresh-step-index{
+      background:#eef5ff !important;
+      color:var(--micro-blue) !important;
+    }
+
+    .system-choice-page .channel-switch,
+    .system-choice-page .section-nav{
+      border-color:#d8e5f3 !important;
+      background:#f7faff !important;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.82) !important;
+    }
+
+    .system-choice-page .channel-option{
+      transition:background-color .18s ease, color .18s ease, box-shadow .18s ease;
+    }
+
+    .system-choice-page .channel-option.is-active{
+      box-shadow:0 8px 20px rgba(37,89,216,.11) !important;
+    }
+
+    .system-choice-page .channel-tag{
+      border:1px solid #dbe6f4 !important;
+    }
+
+    .system-choice-page .system-link,
+    .system-choice-page .status-check-link{
+      box-shadow:0 10px 20px rgba(37,89,216,.18) !important;
+    }
+
+    .system-choice-page .system-link[data-channel-entry][data-system-enabled="true"]{
+      box-shadow:0 10px 22px rgba(37,89,216,.18) !important;
+    }
+
+    .system-choice-page .contact{
+      border-color:#dce8f5 !important;
+      background:linear-gradient(180deg, #fbfdff 0%, #f7fbff 100%) !important;
+    }
+
+    .system-choice-page .contact-line strong{
+      color:var(--micro-blue) !important;
+    }
+
+    .system-choice-page .stock-tip{
+      border-color:#b9d5ff !important;
+      background:#f2f7ff !important;
+      color:#274d77 !important;
+    }
+
+    .system-choice-page ol.steps > li,
+    .system-choice-page .refresh-step{
+      border-color:#dce8f5 !important;
+      background:#fbfdff !important;
+      color:#314158 !important;
+    }
+
+    .system-choice-page .refresh-help-lead,
+    .system-choice-page .tutorial-title,
+    .system-choice-page .status-guide-title{
+      color:#1f334a !important;
+    }
+
+    .system-choice-page .tutorial-frame,
+    .system-choice-page .status-guide-frame{
+      border-color:#cfe0f6 !important;
+      box-shadow:0 10px 22px rgba(15,23,42,.075) !important;
+    }
+
+    .system-choice-page .tutorial-btn,
+    .system-choice-page .status-guide-btn{
+      border-color:#cfe0f6 !important;
+      transition:background-color .18s ease, color .18s ease, transform .18s ease;
+    }
+
+    .system-choice-page .tutorial-btn:hover,
+    .system-choice-page .status-guide-btn:hover{
+      background:#eef5ff !important;
+      transform:translateY(-1px);
+    }
+
+    .system-choice-page .tutorial-dot.is-active,
+    .system-choice-page .status-guide-dot.is-active,
+    .system-choice-page .plus-refresh-dot.is-active{
+      background:var(--micro-teal) !important;
+    }
+
+    .system-choice-page .bill-query-warning{
+      box-shadow:0 8px 18px rgba(249,115,22,.08) !important;
+    }
+
+    .system-choice-page .critical-note,
+    .system-choice-page .focus-hint{
+      box-shadow:0 10px 24px rgba(159,18,57,.06) !important;
+    }
+
+    .system-choice-page .entry-countdown-dialog{
+      border-radius:16px !important;
+      box-shadow:0 24px 64px rgba(15,23,42,.22) !important;
+    }
+
+    @media (max-width:640px){
+      body.system-choice-page main.container{
+        padding:14px !important;
+        border-radius:14px !important;
+      }
+
+      .system-choice-page .system-card,
+      .system-choice-page .content-block,
+      .system-choice-page .system2-tutorial,
+      .system-choice-page .status-guide,
+      .system-choice-page .focus-hint{
+        box-shadow:0 8px 22px rgba(15,23,42,.055) !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="entry-page system-choice-page">
