@@ -2294,3 +2294,112 @@ body:not(.clean-home) #backToTopBtn {
   }
 }
 
+/* Unified subpage pill navigation, 20260702 */
+.subpage-topbar,
+body.entry-page > .subpage-topbar,
+.guide-page > .subpage-topbar,
+.policy-main .subpage-topbar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 12px !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(203, 216, 232, 0.86) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07) !important;
+}
+
+.subpage-topbar .subpage-brand {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-height: 38px !important;
+  color: #111827 !important;
+  font-size: 0.96rem !important;
+  font-weight: 820 !important;
+  white-space: nowrap !important;
+}
+
+.subpage-topbar nav,
+body.entry-page > .subpage-topbar nav,
+.guide-page > .subpage-topbar nav,
+.policy-main .subpage-topbar nav {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  padding-bottom: 0 !important;
+  scrollbar-width: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.subpage-topbar nav::-webkit-scrollbar,
+body.entry-page > .subpage-topbar nav::-webkit-scrollbar,
+.guide-page > .subpage-topbar nav::-webkit-scrollbar,
+.policy-main .subpage-topbar nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+.subpage-topbar nav a,
+body.entry-page > .subpage-topbar nav a,
+.guide-page > .subpage-topbar nav a,
+.policy-main .subpage-topbar nav a {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 38px !important;
+  padding: 0 12px !important;
+  border: 1px solid rgba(203, 216, 232, 0.68) !important;
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f7ff 100%) !important;
+  color: #2d405a !important;
+  font-size: 0.86rem !important;
+  font-weight: 720 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+}
+
+.subpage-topbar nav a:hover,
+.subpage-topbar nav a:active,
+body.entry-page > .subpage-topbar nav a:hover,
+body.entry-page > .subpage-topbar nav a:active,
+.guide-page > .subpage-topbar nav a:hover,
+.guide-page > .subpage-topbar nav a:active,
+.policy-main .subpage-topbar nav a:hover,
+.policy-main .subpage-topbar nav a:active {
+  border-color: #b9cff4 !important;
+  background: #edf4ff !important;
+  color: #2457d6 !important;
+}
+
+@media (max-width: 640px) {
+  body.entry-page {
+    padding-top: 92px !important;
+  }
+
+  body.guide-page {
+    padding: 92px 0 40px !important;
+  }
+
+  html body.policy-main {
+    padding: 92px 10px 28px !important;
+  }
+
+  html body.policy-main .subpage-topbar {
+    top: 8px !important;
+    right: 12px !important;
+    left: 12px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+}
